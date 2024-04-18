@@ -1,6 +1,6 @@
 # Tutorial
 Find basic repo structure:
--docs
--code
--data
--literature
+- docs
+- code
+- data
+- literature

@@ -16,7 +16,7 @@ It is also possible to play around with iRobot Create 3 with an online [Coding P
 
 **Dockerfile for building ROS2 Galactic image**
 
-[Dockerfile](Tutorials%208615955266424c32bb82012bc71e676a/Dockerfile.txt)
+[Dockerfile](Tutorials/Dockerfile.txt)
 
 **Installation** 
 

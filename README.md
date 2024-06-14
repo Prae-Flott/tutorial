@@ -1,7 +1,7 @@
 # Projects Guidance
 
 
-# Robot plattform setup
+# iRobot Create3 Plattform Setup
 
 - Setup steps for the IRobot Create3 can be found here: [IRobot Create3 Setup Guidence](irobot_setup.md)
 

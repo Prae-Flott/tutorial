@@ -8,7 +8,7 @@ After properly setting the RMW on both the Robot and Pi5 ([https://iroboteducati
 
 If it comes up with a Problem when you test with `ros2 action list` try to connect the robot to its wifi and **reboot the Robot, it does help a lot!**
 
-![Untitled](Tutorials%208615955266424c32bb82012bc71e676a/Untitled.png)
+![Untitled](Tutorials/Untitled.png)
 
 ## Build a Node
 

@@ -1,5 +1,5 @@
 
-# Set up ROS2 on Pi5
+# Setup ROS2 on Pi5
 
 ## ROS2 on Ubuntu
 
@@ -22,13 +22,12 @@ sudo nmap -sn 192.168.1.0/24
 sudo apt install iproute2
 `ip addr show`
 
-# Set up Rasp OS and ROS2 on Pi5
+
+## ROS2 on Debian 12
 
 So far the Pasp OS provided on Pi5 is based on [Debian 12 Bookworm](https://www.debian.org/News/2023/20230610). 
 
 Installation of  the PaspOS can be easily done with the help of the [official Imager](https://www.raspberrypi.com/software/) 
-
-## ROS2 on Debian 12
 
 The Debian 12 could also been supported by ROS2, if we check the original package code of ROS2 from ([http://packages.ros.org/ros2/ubuntu/dists](http://packages.ros.org/ros2/ubuntu/dists)). In which we can find the folder for Bookworm. So it should be possible to install on a Bookworm system.
 
@@ -61,11 +60,7 @@ The `VERSION_CODENAME` should be `Bookworm` for our Debian12-based Rasp OS.
 
 [](Tutorials%208615955266424c32bb82012bc71e676a/Untitled%2036791497ed444b06b52bc59ecba2bce8.md)
 
-## Build a subscriber Node
-
-[https://jimbobbennett.dev/blogs/irobot-create3-subscribe-to-messages/](https://jimbobbennett.dev/blogs/irobot-create3-subscribe-to-messages/)
-
-# Basic of ROS2
+## Basic of ROS2
 
 Using actions or topics in a control node in ROS2 involves understanding the difference between these two communication methods and how to implement them in your Python script.
 
@@ -77,7 +72,7 @@ and
 
 Some official tutorials are shown in this repository [https://github.com/iRobotEducation/create3_examples](https://github.com/iRobotEducation/create3_examples)
 
-## **Topics**
+### **Topics**
 
 Topics are a publish/subscribe communication method where nodes can publish messages to or subscribe to messages from a topic. This is often used for continuous or stateless data streams, such as sensor readings or velocity commands.
 
@@ -85,7 +80,7 @@ Topics are a publish/subscribe communication method where nodes can publish mess
 
 To get the battery state from a robot using ROS2, you need to write a subscriber node that listens to the **`/battery_state`** topic. This topic publishes messages of type **`sensor_msgs/msg/BatteryState`**. The **`BatteryState`** message type typically includes information about the battery's voltage, current, charge, capacity, and status.
 
-We need to pay attention to the `**QoS profile**` used by iRobot. ROS ia based around sending messages to topics, and can be considered to be a message broker. Like all message brokers, there is a quality of service (QoS) that defines when a topic can be considered stale, how messages are stored if a subscriber is offline, and things like that. 
+We need to pay attention to the `**QoS profile**` used by iRobot. ROS is based around sending messages to topics, and can be considered to be a message broker. Like all message brokers, there is a quality of service (QoS) that defines when a topic can be considered stale, how messages are stored if a subscriber is offline, and things like that. 
 
 Follow the Blogs ( [https://jimbobbennett.dev/blogs/irobot-create3-subscribe-to-messages/](https://jimbobbennett.dev/blogs/irobot-create3-subscribe-to-messages/)). The relevant details are the **`QoS profile`**, particularly the **`Reliability`**, **`Durability`**, and **`Liveliness`**. To subscribe to these messages, the subscriber needs to create a **`QoSProfile`** object with the same settings, and pass this to the **`create_subscription`** call:
 
@@ -165,7 +160,7 @@ setup(
 
 Make sure that the module and function names in the **`entry_points`** is correct. The module **`battery_state_subscriber`** should exist in the **`battery_state`** package and it should have a **`main`** function.
 
-## **Actions**
+### **Actions**
 
 Actions are a more complex communication method used for pre-emptive and long-running tasks. Actions are appropriate for tasks where you need to get feedback during execution, or you might need to cancel the task.
 
@@ -223,6 +218,10 @@ if __name__ == '__main__':
 In this example, **`SomeAction`** and **`SomeGoal`** should be replaced with the actual action types defined for your specific use case. The **`send_goal`** method sends a goal to the action server, and callbacks handle the server's response, feedback, and result.
 
 Remember, the specifics of how you use topics or actions will depend on the capabilities of your robot and what you're trying to achieve. The ROS2 documentation and any specific documentation provided for your robot are valuable resources for understanding how to implement these communication methods effectively.
+
+### Examples
+
+[https://jimbobbennett.dev/blogs/irobot-create3-subscribe-to-messages/](https://jimbobbennett.dev/blogs/irobot-create3-subscribe-to-messages/)
 
 ## Build a Control Node following the ros2_control standard
 

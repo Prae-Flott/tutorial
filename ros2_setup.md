@@ -1,6 +1,7 @@
-# Control the Create3 with Ros2 on Pi5
 
-# Set up Ubuntu and ROS2 on Pi5
+# Set up ROS2 on Pi5
+
+## ROS2 on Ubuntu
 
 **Dockerfile for building ROS2 Galactic image**
 

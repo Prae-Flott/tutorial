@@ -68,6 +68,7 @@ But we need to change the get OS name command in Ubuntu, fit it to Debian system
 ```bash
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $VERSION_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
 ```
+The `VERSION_CODENAME` should be `Bookworm` for our Debian12-based Rasp OS.
 
 [](Tutorials%208615955266424c32bb82012bc71e676a/Untitled%2036791497ed444b06b52bc59ecba2bce8.md)
 

@@ -12,7 +12,7 @@ It is also possible to play around with iRobot Create 3 with an online [Coding P
 
 The first step is to connect the Pi5 to the iRobot, see please this tutorial ([https://jimbobbennett.dev/blogs/irobot-create3-connect-a-pi/](https://jimbobbennett.dev/blogs/irobot-create3-connect-a-pi/)). In this case, we do not have to connect the Robot itself to the WiFi. 
 
-**WiFi at chair ASM would be:** `ASM_RoboFlott`, **Password:** ``
+**WiFi at chair ASM would be:** `ASM_RoboFlott`, **Password:** `roboflott123`
 
 
 ## RMW

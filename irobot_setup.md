@@ -12,7 +12,18 @@ It is also possible to play around with iRobot Create 3 with an online [Coding P
 
 The first step is to connect the Pi5 to the iRobot, see please this tutorial ([https://jimbobbennett.dev/blogs/irobot-create3-connect-a-pi/](https://jimbobbennett.dev/blogs/irobot-create3-connect-a-pi/)). In this case, we do not have to connect the Robot itself to the WiFi. 
 
+**WiFi at chair ASM would be:** `ASM_RoboFlott`, **Password:** ``
+
+
+## RMW
+
 After properly setting the RMW on both the Robot and Pi5 ([https://iroboteducation.github.io/create3_docs/setup/xml-config/](https://iroboteducation.github.io/create3_docs/setup/xml-config/)), which we use `fastrtps` for now, still **remember to switch the bottom on the [Adapter board](https://iroboteducation.github.io/create3_docs/hw/adapter/) to the USB side.** 
+
+## Namespace
+
+To face the provlem with multiple 
+
+## Others
 
 If it comes up with a Problem when you test with `ros2 action list` try to connect the robot to its wifi and **reboot the Robot, it does help a lot!**
 

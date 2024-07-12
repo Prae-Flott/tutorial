@@ -8,13 +8,13 @@ The first step is to connect the robot to the WLAN network and update the firmwa
 
 It is also possible to play around with iRobot Create 3 with an online [Coding Platform](https://python.irobot.com/) using Python.
 
-# WIFI Connection and basic Configuration
+# WIFI Connection and Basic Configuration
 
 The first step is to connect the Pi5 to the iRobot, see please this tutorial ([https://jimbobbennett.dev/blogs/irobot-create3-connect-a-pi/](https://jimbobbennett.dev/blogs/irobot-create3-connect-a-pi/)). 
 
-To connect the robot to local Server, we have provided WiFi for local servers:
+To connect the robot to the local Server, we have provided WiFi for local servers:
 
-**WiFi at chair ASM would be:** `ASM_RoboFlott`, **Password:** `roboflott123`
+**WIFI name at chair ASM:** `ASM_RoboFlott`, **Password:** `roboflott123`
 
 ## RMW
 
@@ -23,7 +23,10 @@ After properly setting the RMW on both the Robot and Pi5 ([https://iroboteducati
 ## Namespace
 
 To face the problem with multiple robots, we need to define the `namespace` for each robot.
-After connecting with the robot WiFi, you can find in the Configuration
+
+After connecting with the robot WIFI( wifi name should look like CREATE-XXXX), open robot page `192.168.0.1` you can find the namespace slot under Configuration.
+
+The namespace should be given in a form like `/rn` (n is 1-10), n is also the number for the username of the Raspberry Pi, connected to the robot.
 
 ## Others
 

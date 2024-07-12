@@ -24,7 +24,7 @@ After properly setting the RMW on both the Robot and Pi5 ([https://iroboteducati
 
 To face the problem with multiple robots, we need to define the `namespace` for each robot.
 
-After connecting with the robot WIFI( wifi name should look like CREATE-XXXX), open robot page `192.168.0.1` you can find the namespace slot under Configuration.
+After connecting with the robot WIFI( wifi name should look like CREATE-XXXX), open robot page `192.168.10.1` you can find the namespace slot under Configuration.
 
 The namespace should be given in a form like `/rn` (n is 1-10), n is also the number for the username of the Raspberry Pi, connected to the robot.
 

@@ -9,10 +9,6 @@ Playing around with iRobot Create 3 with an online [Coding Platform](https://pyt
 
 A Tutorial contains the whole process is ([https://jimbobbennett.dev/blogs/irobot-create3-connect-a-pi/](https://jimbobbennett.dev/blogs/irobot-create3-connect-a-pi/))
 
-To connect the robot to the local Server, we have provided WiFi for local servers:
-
-**WIFI name at chair ASM:** `ASM_RoboFlott`, **Password:** `roboflott123`
-
 # WIFI Connection and Basic Configuration
 
 The first step after getting the robot is to update the firmware. To do that, follow the [setup guidance](https://edu.irobot.com/create3-setup).

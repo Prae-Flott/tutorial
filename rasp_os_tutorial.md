@@ -53,6 +53,8 @@ Follow the [official tutorial for Ubuntu](https://iroboteducation.github.io/crea
 
 - Check the connection by `ip addr show usb0`, you suppose to see `<BROADCAST,MULTICAST,UP,LOWER_UP>` and the IP of the Server.
 
-  ##
+## Setup NTP 
+
+As ROS2 communication depends a lot on the synchronization of the clock, we need to provide an  NTP server to synchronize the time between the robot and Pi, without having internet. The process can be found in the following [tutorial](https://iroboteducation.github.io/create3_docs/setup/compute-ntp/)
 
    

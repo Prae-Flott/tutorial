@@ -21,13 +21,30 @@ After rebooting the robot, connect again to the wifi of the robot and go into th
 
 Here we need to do some configurations as follows:
 
-## RMW
+### Connect
+- Open from the top menu `Connect`
+- The Hostname should be given in a form like `robot-0n` (n is 1-10).
+- Bluetooth name should be same as hostname.
+- Press `update`
 
-After properly setting the RMW on both the Robot and Pi5 ([https://iroboteducation.github.io/create3_docs/setup/xml-config/](https://iroboteducation.github.io/create3_docs/setup/xml-config/)), which we use `fastrtps` for now, still **remember to switch the bottom on the [Adapter board](https://iroboteducation.github.io/create3_docs/hw/adapter/) to the USB side.** 
+
+### Configurations
+- Open from the top menu `Application` -> `Configurations`
+- Select the `fastrtps` as our RMW (Ros Middle Ware),  as the [official document](https://iroboteducation.github.io/create3_docs/setup/xml-config/), RMW should be identical on both the Robot and Pi5.
+- Save the changes
+
+### NTP configurations
+Follow the [official tutorial](https://iroboteducation.github.io/create3_docs/setup/compute-ntp/), we have the following steps for ethernet connection through usb-c
+- Open from the top menu `Beta features` -> `ntp.conf`
+- Add the following if it does not exist: `server 192.168.186.3 iburst`
+- Save the change
+- reboot the robot through `Application` -> `Reboot Robot`.
+
+**remember to switch the bottom on the [Adapter board](https://iroboteducation.github.io/create3_docs/hw/adapter/) to the USB side.** 
 
 <strike>
 
-## Namespace
+### Namespace
 
 To face the problem with multiple robots, we need to define the `namespace` for each robot.
 

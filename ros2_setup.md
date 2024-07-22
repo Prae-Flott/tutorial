@@ -1,28 +1,6 @@
 
 # Setup ROS2 on Pi5
 
-## ROS2 on Ubuntu
-
-**Dockerfile for building ROS2 Galactic image**
-
-[Dockerfile](Tutorials/Dockerfile.txt)
-
-**Installation** 
-
-- network-manager
-- `apt install iputils-ping`
-- install nmap for showing devices in network:
-
-sudo apt update
-sudo apt install nmap
-
-sudo nmap -sn 192.168.1.0/24
-
-- Install iproute2 to show own ip Adress:
-sudo apt install iproute2
-`ip addr show`
-
-
 ## ROS2 on Debian 12
 
 So far the Pasp OS provided on Pi5 is based on [Debian 12 Bookworm](https://www.debian.org/News/2023/20230610). 
@@ -229,3 +207,23 @@ To achieve control function in ROS2, there is a Framework we can use called  [ro
 
 When using the `ros2_control` framework, the way you interact with actions and topics can be slightly different, especially since `ros2_control` is designed to abstract hardware control through the use of controllers. The controllers provided by `ros2_control` often expose interfaces through topics or actions. Let’s explore how this would look like in a control node:
 
+## ROS2 on Ubuntu
+
+**Dockerfile for building ROS2 Galactic image**
+
+[Dockerfile](Tutorials/Dockerfile.txt)
+
+**Installation** 
+
+- network-manager
+- `apt install iputils-ping`
+- install nmap for showing devices in network:
+
+sudo apt update
+sudo apt install nmap
+
+sudo nmap -sn 192.168.1.0/24
+
+- Install iproute2 to show own ip Adress:
+sudo apt install iproute2
+`ip addr show`

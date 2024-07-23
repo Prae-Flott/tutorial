@@ -9,7 +9,7 @@ The installation is through Imager and can be downloaded from the following [lin
 
 Choose the OS version `Raspberry Pi OS (64-bits)`, as the following image:
 
-fig.1
+![Rasp1](Tutorials/rasp1.png)
 
 Then to keep the setting identical on all our 10 robots, we need to clarify some setup before start writing in to SD card
 

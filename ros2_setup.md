@@ -20,7 +20,7 @@ As Debian Linux only got Tier3 supported by ROS2. We are not able to install it 
 **Attention! We need to modify at some place**
 First, setup UTF-8 supported locale
 
-Check to ensure that you are using a UTF-8 locale by typing
+1. Check to ensure that you are using a UTF-8 locale by typing
 ```
 echo $LANG
 ```
@@ -36,7 +36,7 @@ sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 export LANG=en_US.UTF-8
 ```
 
-At the step adding the ROS 2 apt repository to your system remove the universe step, it do not work for a debian os.
+2. At the step of adding the ROS 2 apt repository to your system remove the universe step, it do not work for a debian os.
 
 ```bash
 sudo apt install software-properties-common
@@ -53,7 +53,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-a
 ```
 The `VERSION_CODENAME` should be `Bookworm` for our Debian12-based Rasp OS.
 
-Install development tools and ROS tools
+3. Install development tools and ROS tools
 ```
 sudo apt install -y \
    python3-flake8-blind-except \
@@ -67,7 +67,7 @@ sudo apt install -y \
    python3-pytest-rerunfailures
 ```
 
-As we use the firmware `H.2.6` for `Ros2 HUmble`, according to the [official document](https://iroboteducation.github.io/create3_docs/releases/h_2_6/), we need to install the `irobot_create_msgs 2.1.0`
+4. As we use the firmware `H.2.6` for `Ros2 HUmble`, according to the [official document](https://iroboteducation.github.io/create3_docs/releases/h_2_6/), we need to install the `irobot_create_msgs 2.1.0`
 
 Navigate to the folder of your workspace of ros2 (`roboflott` is the name of our namespace):
 ```

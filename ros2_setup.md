@@ -18,6 +18,17 @@ As Debian Linux only got Tier3 supported by ROS2. We are not able to install it 
 [Ubuntu (source) — ROS 2 Documentation: Humble  documentation](https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setup.html)
 
 **Attention! We need to modify at some place**
+First, setup UTF-8 supported locale
+```
+locale  # check for UTF-8
+
+sudo apt update && sudo apt install locales
+sudo locale-gen en_US en_US.UTF-8
+sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+locale  # verify settings
+```
 
 At the step adding the ROS 2 apt repository to your system remove the universe step, it do not work for a debian os.
 

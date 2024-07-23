@@ -13,7 +13,7 @@ Choose the OS version `Raspberry Pi OS (64-bits)`, as the following image:
 
 Then to keep the setting identical on all our 10 robots, we need to clarify some setup before start writing in to SD card
 
-- Open Edit Setting and set the hostname as `raspberrypi5-0x` the `x` here is the unique ID for each robot, e.g. raspberrypi5-04. Similarly, the Username should be `robot-0x`, and the Password should be `x`, a single number between 0-10.
+- Open **Edit Setting** and set the hostname as `raspberrypi5-0x` the `x` here is the unique ID for each robot, e.g. raspberrypi5-04. Similarly, the Username should be `robot-0x`, and the Password should be `x`, a single number between 0-10.
 - To connect the robot to the local Server, we have provided WiFi for local servers:
 
   **WIFI name at chair ASM:** `ASM_RoboFlott`, **Password:** `roboflott123`

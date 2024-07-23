@@ -24,11 +24,11 @@ Check to ensure that you are using a UTF-8 locale by typing
 ```
 echo $LANG
 ```
-of 
+or
 ```
 locale
 ```
-If not,
+If not, install the locales and set the `UTF-8`
 ```
 sudo apt update && sudo apt install locales
 sudo locale-gen en_US en_US.UTF-8

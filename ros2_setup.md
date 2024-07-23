@@ -60,12 +60,34 @@ sudo apt update && sudo apt install -y \
   python3-pytest-cov \
   ros-dev-tools
 ```
+```
+sudo apt install -y build-essential python3-colcon-common-extensions python3-rosdep ros-humble-rmw-cyclonedds-cpp
+```
+4. Create a workspace and clone all repos:
+```
+mkdir -p ~/ros2_humble/src
+cd ~/ros2_humble
+vcs import --input https://raw.githubusercontent.com/ros2/ros2/humble/ros2.repos src
+```
+5. Install dependencies using rosdep
+```
+sudo apt upgrade
+```
+```
+sudo rosdep init
+rosdep update
+rosdep install --from-paths src --ignore-src -y --skip-keys "fastcdr rti-connext-dds-6.0.1 urdfdom_headers"
+```
+6. Build the code in the workspace
+```
+colcon build --symlink-install
+```
 
-4. As we use the firmware `H.2.6` for `Ros2 HUmble`, according to the [official document](https://iroboteducation.github.io/create3_docs/releases/h_2_6/), we need to install the `irobot_create_msgs 2.1.0`
+7. As we use the firmware `H.2.6` for `Ros2 HUmble`, according to the [official document](https://iroboteducation.github.io/create3_docs/releases/h_2_6/), we need to install the `irobot_create_msgs 2.1.0`
 
 Navigate to the folder of your workspace of ros2 (`roboflott` is the name of our namespace):
 ```
-cd ~/roboflott/src
+cd ~/ros2_humble/src
 ```
 And clone the official repository
 ```
@@ -75,8 +97,18 @@ git clone -b 2.1.0  https://github.com/iRobotEducation/irobot_create_msgs.git
 And build the whole workspace.
 
 ```
-cd ~/roboflott
+cd ~/ros2_humble
 colcon build
+```
+
+8. Setting your default RMW (ROS 2 middleware). We use fastrtps, paired with the iRobot.
+```
+echo "export RMW_IMPLEMENTATION=rmw_fastrtps_cpp" >> ~/.bashrc
+```
+
+9. Auto-running the following when you open a new session
+```
+echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 ```
 
 ## Basic of ROS2

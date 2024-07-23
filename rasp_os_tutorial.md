@@ -23,7 +23,7 @@ Follow the [official tutorial for Ubuntu](https://iroboteducation.github.io/crea
 
 - In the system-boot partition, edit `config.txt` and add `dtoverlay=dwc2,dr_mode=peripheral` at the end of the file.
 
-  with the command `sudo nano /etc/boot/firmware/config.txt`.
+  with the command `sudo nano /boot/firmware/config.txt`.
 
 - In the system-boot partition, edit `cmdline.txt` to add `modules-load=dwc2,g_ether` after `rootwait`.
 

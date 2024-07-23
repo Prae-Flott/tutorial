@@ -47,7 +47,38 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-a
 ```
 The `VERSION_CODENAME` should be `Bookworm` for our Debian12-based Rasp OS.
 
-[](Tutorials%208615955266424c32bb82012bc71e676a/Untitled%2036791497ed444b06b52bc59ecba2bce8.md)
+Install development tools and ROS tools
+```
+sudo apt install -y \
+   python3-flake8-blind-except \
+   python3-flake8-builtins \
+   python3-flake8-class-newline \
+   python3-flake8-comprehensions \
+   python3-flake8-deprecated \
+   python3-flake8-import-order \
+   python3-flake8-quotes \
+   python3-pytest-repeat \
+   python3-pytest-rerunfailures
+```
+
+As we use the firmware `H.2.6` for `Ros2 HUmble`, according to the [official document](https://iroboteducation.github.io/create3_docs/releases/h_2_6/), we need to install the `irobot_create_msgs 2.1.0`
+
+Navigate to the folder of your workspace of ros2 (`roboflott` is the name of our namespace):
+```
+cd ~/roboflott/src/irobot_create_msgs
+
+```
+And clone the official repository
+```
+git clone -b 2.1.0  https://github.com/iRobotEducation/irobot_create_msgs.git
+```
+
+And build the whole workspace.
+
+```
+cd ~/roboflott
+colcon build
+```
 
 ## Basic of ROS2
 

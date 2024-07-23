@@ -54,16 +54,11 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-a
 
 3. Install development tools and ROS tools
 ```
-sudo apt install -y \
-   python3-flake8-blind-except \
-   python3-flake8-builtins \
-   python3-flake8-class-newline \
-   python3-flake8-comprehensions \
-   python3-flake8-deprecated \
-   python3-flake8-import-order \
-   python3-flake8-quotes \
-   python3-pytest-repeat \
-   python3-pytest-rerunfailures
+sudo apt update && sudo apt install -y \
+  python3-flake8-docstrings \
+  python3-pip \
+  python3-pytest-cov \
+  ros-dev-tools
 ```
 
 4. As we use the firmware `H.2.6` for `Ros2 HUmble`, according to the [official document](https://iroboteducation.github.io/create3_docs/releases/h_2_6/), we need to install the `irobot_create_msgs 2.1.0`

@@ -1,4 +1,4 @@
-
+echo $LANG
 # Setup ROS2 on Pi5
 
 ## ROS2 on Debian 12

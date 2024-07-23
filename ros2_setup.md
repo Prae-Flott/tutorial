@@ -46,12 +46,11 @@ sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o
 
 Then add the repository to the source list
 
-But we need to change the get OS name command in Ubuntu, fit it to Debian system, like `$(. /etc/os-release && echo $VERSION_CODENAME)`.
+But we need to change the get OS name command in Ubuntu, fit it to Debian system. `$(. /etc/os-release && echo $VERSION_CODENAME)` can print the version of our current OS in the terminal. For Example, it should be `bookworm` for our Debian12-based Rasp OS.
 
 ```bash
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $VERSION_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
 ```
-The `VERSION_CODENAME` should be `Bookworm` for our Debian12-based Rasp OS.
 
 3. Install development tools and ROS tools
 ```

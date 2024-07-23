@@ -65,8 +65,7 @@ As we use the firmware `H.2.6` for `Ros2 HUmble`, according to the [official doc
 
 Navigate to the folder of your workspace of ros2 (`roboflott` is the name of our namespace):
 ```
-cd ~/roboflott/src/irobot_create_msgs
-
+cd ~/roboflott/src
 ```
 And clone the official repository
 ```

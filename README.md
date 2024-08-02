@@ -1,7 +1,10 @@
 # Projects Guidance
 
+## SD card copy
 
-# iRobot Create3 Plattform Setup
+- steps for creating new Pis through clone SD card. [SD Card Clone Guidance](clone_SDcards.md)
+
+## iRobot Create3 Plattform Setup
 
 - Setup steps for the IRobot Create3 can be found here: [IRobot Create3 Setup Guidence](irobot_setup.md)
 

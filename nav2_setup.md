@@ -1,6 +1,6 @@
 # Nav2 Tutorials
 ## Installation && Build
-As our ROS2 is installed from the source, we can not directly install ROS2 by the `apt install` command. We must also install the Nav2 from the source and build it there. 
+As our ROS2 is installed from the source, we can not directly install ROS2 by the `apt install` command. We must also install the Nav2 from the source and build it there. Building method is provided in the [Offical documents](https://docs.nav2.org/development_guides/build_docs/index.html)
 
 ```
 source <ros_ws>/install/setup.bash

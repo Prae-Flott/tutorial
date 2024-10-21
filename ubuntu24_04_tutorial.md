@@ -17,6 +17,13 @@ Then to keep the setting identical on all our 10 robots, we need to clarify some
 ## ROS2 jazzy installation
 From the [iRobot official tutorial](https://iroboteducation.github.io/create3_docs/setup/ubuntu2204/) and the [ROS2 jazzy documentation](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html), we sum the installation into following steps.
 
+- Make sure you have a locale that supports UTF-8.
+  `locale  # check for UTF-8`
+- Ensure that the Ubuntu Universe repository is enabled by checking the output of this command:
+  `apt-cache policy | grep universe`
+- Now add the ROS 2 GPG key with apt.
+  `sudo apt update && sudo apt install curl -y
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg`
 
 ## Create Ethernet through usb0
 Follow the [official tutorial for Ubuntu](https://iroboteducation.github.io/create3_docs/setup/pi4humble/), after first time boot the rasp os, we need to establish a ethernet connection to robot through `usb0`, which is the USB-C interface.

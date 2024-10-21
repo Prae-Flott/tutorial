@@ -4,7 +4,7 @@
 
 [Ubuntu24.04 Document](https://ubuntu.com/blog/tag/ubuntu-24-04-lts)
 
-## Installation
+## OS Installation
 The installation is through Imager and can be downloaded from the following [link](https://www.raspberrypi.com/software/).
 
 Then to keep the setting identical on all our 10 robots, we need to clarify some setup before start writing in to SD card
@@ -13,6 +13,10 @@ Then to keep the setting identical on all our 10 robots, we need to clarify some
 - To connect the robot to the local Server, we have provided WiFi for local servers:
 
   **WIFI name at chair ASM:** `ASM_RoboFlott`, **Password:** `roboflott123`
+
+## ROS2 jazzy installation
+From the [iRobot official tutorial](https://iroboteducation.github.io/create3_docs/setup/ubuntu2204/) and the [ROS2 jazzy documentation](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html), we sum the installation into following steps.
+
 
 ## Create Ethernet through usb0
 Follow the [official tutorial for Ubuntu](https://iroboteducation.github.io/create3_docs/setup/pi4humble/), after first time boot the rasp os, we need to establish a ethernet connection to robot through `usb0`, which is the USB-C interface.

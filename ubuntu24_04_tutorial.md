@@ -18,12 +18,51 @@ Then to keep the setting identical on all our 10 robots, we need to clarify some
 From the [iRobot official tutorial](https://iroboteducation.github.io/create3_docs/setup/ubuntu2204/) and the [ROS2 jazzy documentation](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html), we sum the installation into following steps.
 
 - Make sure you have a locale that supports UTF-8.
+
   `locale  # check for UTF-8`
+  
 - Ensure that the Ubuntu Universe repository is enabled by checking the output of this command:
+
   `apt-cache policy | grep universe`
+  
 - Now add the ROS 2 GPG key with apt.
-  `sudo apt update && sudo apt install curl -y
-sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg`
+
+  `sudo apt update && sudo apt install curl -y`
+
+  `sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg`
+
+- Then add the repository to your sources list.
+
+  ```
+  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+  ```
+
+- Make sure your other packages are up to date
+
+  `sudo apt update && sudo apt upgrade`
+
+- ROS-Base Install (Bare Bones):
+
+  `sudo apt install ros-jazzy-ros-base`
+
+  or if the tutorial or Rviz is required:
+
+  `sudo apt install ros-jazzy-desktop`
+
+- Next add the Create® 3 messages:
+
+  `sudo apt install -y ros-humble-irobot-create-msgs`
+
+- Install a few other packages:
+
+  `sudo apt install -y build-essential python3-colcon-common-extensions python3-rosdep ros-jazzy-rmw-cyclonedds-cpp`
+
+- The default middleware that ROS 2 uses is `Fast DDS`
+
+- Set up your environment by sourcing the following file
+
+  `source /opt/ros/jazzy/setup.bash`
+
 
 ## Create Ethernet through usb0
 Follow the [official tutorial for Ubuntu](https://iroboteducation.github.io/create3_docs/setup/pi4humble/), after first time boot the rasp os, we need to establish a ethernet connection to robot through `usb0`, which is the USB-C interface.

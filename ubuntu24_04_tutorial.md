@@ -1,4 +1,4 @@
-# Raspberry Pi OS Tut
+# Ubuntu24.04 Tut
 
 [Rasp Pi 5 Document](https://www.raspberrypi.com/documentation/computers/getting-started.html) 
 

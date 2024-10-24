@@ -38,20 +38,11 @@ Follow the [official tutorial for Ubuntu](https://iroboteducation.github.io/crea
 
   with the command `sudo nano /boot/firmware/cmdline.txt`
 
-- We also need to edit the Netplan Configuration File:.
+- We also need to create a new  Netplan Configuration File:.
 
-  open the file with `sudo nano /etc/netplan/50-cloud-init.yaml`
+  create the file with `sudo nano /etc/netplan/01-netcfg.yaml`
 
-  add information about the static IP and interface with writing the following content into the file, under `ethernets`:
-
-  ```
-  usb0:
-            dhcp4: false
-            optional: true
-            addresses:
-               - 192.168.186.3/24
-  ```
-  so that the whole should looks like below:
+  add information about the static IP and interface with writing the following content into the file, under `ethernets`, so that the whole should look like below:
   ```
   network:
      ethernets:
@@ -68,6 +59,10 @@ Follow the [official tutorial for Ubuntu](https://iroboteducation.github.io/crea
              set-name: eth0
      version: 2
   ```
+  Save the file with `Ctrl+S` and `Ctrl+X`.
+
+- Secure Configuration File Permissions and its priority by `sudo chmod 600 /etc/netplan/01-netcfg.yaml`
+  
 - After editing that file, you will need to run `sudo netplan generate` followed by `sudo netplan apply` to update your network configuration
 
 - If you met a Problem with command `sudo netplan apply` regarding `systemd-networkd.service`, you need to `enable` it first.

@@ -25,40 +25,69 @@ sudo systemctl start ssh
 sudo systemctl enable ssh
 ```
 
+- Reboot the Pi by `sudo reboot`
+
 ## Create Ethernet through usb0
 Follow the [official tutorial for Ubuntu](https://iroboteducation.github.io/create3_docs/setup/pi4humble/), after first time boot the rasp os, we need to establish a ethernet connection to robot through `usb0`, which is the USB-C interface.
 
-- In the system-boot partition, edit `config.txt` and add `dtoverlay=dwc2,dr_mode=peripheral` at the end of the file.
+- Edit `config.txt` and add `dtoverlay=dwc2,dr_mode=peripheral` at the end of the file.
 
   with the command `sudo nano /boot/firmware/config.txt`.
 
-- In the system-boot partition, edit `cmdline.txt` to add `modules-load=dwc2,g_ether` after `rootwait`.
+- Edit `cmdline.txt` to add `modules-load=dwc2,g_ether` after `rootwait`.
 
   with the command `sudo nano /boot/firmware/cmdline.txt`
 
-- In the system-boot partition, we need to setup a network configuration without using network manager.
+- We also need to edit the Netplan Configuration File:.
 
-  create a new file with `sudo nano /etc/network/interfaces.d/g_ether`
+  open the file with `sudo nano /etc/netplan/50-cloud-init.yaml`
 
-  add information about the static IP and interface with writing the following content into the file:
+  add information about the static IP and interface with writing the following content into the file, under `ethernets`:
 
   ```
-  auto usb0
-  allow-hotplug usb0
-  iface usb0 inet static
-        address 192.168.186.3/24
-        netmask 255.255.0.0
-
-  auto usb0.1
-  allow-hotplug usb0.1
-  iface usb0.1 inet dhcp
-
-
-  EOF
+  usb0:
+            dhcp4: false
+            optional: true
+            addresses:
+               - 192.168.186.3/24
   ```
-- Reboot the Pi by `sudo reboot`
+  so that the whole should looks like below:
+  ```
+  network:
+     ethernets:
+         usb0:
+             dhcp4: false
+             optional: true
+             addresses:
+                - 192.168.186.3/24
+         eth0:
+             dhcp4: true
+             dhcp6: true
+             match:
+                 macaddress: d8:3a:dd:9e:d5:c8
+             set-name: eth0
+     version: 2
+  ```
+- After editing that file, you will need to run `sudo netplan generate` followed by `sudo netplan apply` to update your network configuration
+
+- If you met a Problem with command `sudo netplan apply` regarding `systemd-networkd.service`, you need to `enable` it first.
+
+  With command `sudo systemctl status systemd-networkd` we can check if it was installed and if it was enabled.
+
+  If not enabled, run
+
+  ```
+  sudo systemctl enable systemd-networkd
+  sudo systemctl start systemd-networkd
+  ```
+  To enable.
+
+- Reboot the Pi by `sudo reboot` after doing all this.
+
+- check if the `usb0` show up in the command `nmcli d`.
 
 - Check the connection by `ip addr show usb0`, you suppose to see `<BROADCAST,MULTICAST,UP,LOWER_UP>` and the IP of the Server.
+
 
 
 ## ROS2 jazzy installation

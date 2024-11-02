@@ -108,7 +108,7 @@ echo "export RMW_IMPLEMENTATION=rmw_fastrtps_cpp" >> ~/.bashrc
 
 9. Auto-running the following when you open a new session
 ```
-echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+echo "source /ros2_humble/install/setup.bash" >> ~/.bashrc
 ```
 
 ## Basic of ROS2

@@ -4,7 +4,11 @@
 
 [Ubuntu24.04 Document](https://ubuntu.com/blog/tag/ubuntu-24-04-lts)
 
-## OS Installation
+# Table of Contents
+- [OS Installation](#OS-Installation)
+- [ROS2 Installation](#ROS2-jazzy-installation)
+
+## OS-Installation
 The installation is through Imager and can be downloaded from the following [link](https://www.raspberrypi.com/software/).
 
 Then to keep the setting identical on all our 10 robots, we need to clarify some setup before starting the SD card
@@ -87,7 +91,7 @@ Follow the [official tutorial for Ubuntu](https://iroboteducation.github.io/crea
 
 As ROS2 communication depends a lot on the synchronization of the clock, we need to provide an  NTP server to synchronize the time between the robot and Pi, without having internet. The process can be found in the following [tutorial](https://iroboteducation.github.io/create3_docs/setup/compute-ntp/)
 
-## ROS2 jazzy installation
+## ROS2-jazzy-installation
 From the [iRobot official tutorial](https://iroboteducation.github.io/create3_docs/setup/ubuntu2204/) and the [ROS2 jazzy documentation](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html), we sum the installation into following steps.
 
 - Make sure you have a locale that supports UTF-8.

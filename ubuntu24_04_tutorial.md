@@ -9,6 +9,7 @@
 - [Ethernet Connection & NTP Server](#Create-Ethernet-on-USB0)
 - [ROS2 Jazzy Installation](#ROS2-jazzy-installation)
 - [RPLidar Setup](#RPLidar-Setup)
+- [Nav2 & SLAM Installation](#Nav2-SLAM-Installation)
 
 ## OS-Installation
 The installation is through Imager and can be downloaded from the following [link](https://www.raspberrypi.com/software/).
@@ -156,6 +157,7 @@ As rplidar_ros running requires the read and write permissions of the serial dev
 But a better way is to create a udev rule:
 
 
+## Nav2-SLAM-Installation
 
 
 

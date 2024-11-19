@@ -144,12 +144,18 @@ From the [iRobot official tutorial](https://iroboteducation.github.io/create3_do
 
 ## RPLidar-Setup
 
-After connecting the RPLidar with the Pi on a USB-A through a adapter board, the light on the board should keep green, represent the connection is succeed.
+After connecting the RPLidar with the Pi on a USB-A through an adapter board, the light on the board should keep green, representing the connection is succeed. We can type the `usb-devices`, and see if the Lidar is recognized.
 
 On Pi5 we need to install the ros packages for RPLidar by `sudo apt install ros-jazzy-rplidar-ros`, details of this packages can be found in the [official repository](https://github.com/Slamtec/rplidar_ros)
 As they may also develop the packages for the new ROS2, could be found [here](https://github.com/Slamtec/sllidar_ros2).
 
-After installing the packages, we can 
+As rplidar_ros running requires the read and write permissions of the serial device. You can manually modify it with the following command:
+
+`sudo chmod 777 /dev/ttyUSB0`
+
+But a better way is to create a udev rule:
+
+
 
 
 

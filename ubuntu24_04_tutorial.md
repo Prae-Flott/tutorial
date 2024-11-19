@@ -4,11 +4,11 @@
 
 [Ubuntu24.04 Document](https://ubuntu.com/blog/tag/ubuntu-24-04-lts)
 
-# Table of Contents
+## Table of Contents
 - [OS Installation](#OS-Installation)
 - [Ethernet Connection & NTP Server](#Create-Ethernet-on-USB0)
 - [ROS2 Jazzy Installation](#ROS2-jazzy-installation)
-- 
+- [RPLidar Setup](#RPLidar-Setup)
 
 ## OS-Installation
 The installation is through Imager and can be downloaded from the following [link](https://www.raspberrypi.com/software/).
@@ -141,6 +141,15 @@ From the [iRobot official tutorial](https://iroboteducation.github.io/create3_do
 - Set up your environment by sourcing the following file
 
   `source /opt/ros/jazzy/setup.bash`
+
+## RPLidar-Setup
+
+After connecting the RPLidar with the Pi on a USB-A through a adapter board, the light on the board should keep green, represent the connection is succeed.
+
+On Pi5 we need to install the ros packages for RPLidar by `sudo apt install ros-jazzy-rplidar-ros`, details of this packages can be found in the [official repository](https://github.com/Slamtec/rplidar_ros)
+As they may also develop the packages for the new ROS2, could be found [here](https://github.com/Slamtec/sllidar_ros2).
+
+After installing the packages, we can 
 
 
 

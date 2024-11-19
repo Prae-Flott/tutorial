@@ -6,7 +6,9 @@
 
 # Table of Contents
 - [OS Installation](#OS-Installation)
-- [ROS2 Installation](#ROS2-jazzy-installation)
+- [Ethernet Connection & NTP Server](#Create-Ethernet-on-USB0)
+- [ROS2 Jazzy Installation](#ROS2-jazzy-installation)
+- 
 
 ## OS-Installation
 The installation is through Imager and can be downloaded from the following [link](https://www.raspberrypi.com/software/).
@@ -31,7 +33,7 @@ sudo systemctl enable ssh
 
 - Reboot the Pi by `sudo reboot`
 
-## Create Ethernet through usb0
+## Create-Ethernet-on-USB0
 Follow the [official tutorial for Ubuntu](https://iroboteducation.github.io/create3_docs/setup/pi4humble/), after first time boot the rasp os, we need to establish a ethernet connection to robot through `usb0`, which is the USB-C interface.
 
 - Edit `config.txt` and add `dtoverlay=dwc2,dr_mode=peripheral` at the end of the file.

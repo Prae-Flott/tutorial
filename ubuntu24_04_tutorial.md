@@ -31,6 +31,11 @@ sudo apt install openssh-client openssh-server -y
 sudo systemctl start ssh
 sudo systemctl enable ssh
 ```
+-Add an ssh key, to connect without passwort:
+```
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+ssh-copy-id -i ~/.ssh/id_rsa.pub username@server_ip
+```
 
 - Reboot the Pi by `sudo reboot`
 

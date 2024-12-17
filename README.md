@@ -8,12 +8,17 @@
 
 - Setup steps for the IRobot Create3 can be found here: [IRobot Create3 Setup Guidence](irobot_setup.md)
 
-- Setup steps for the Raspberry Pi 5 can be found here: [ Pi5 Setup Guidence](rasp_os_tutorial.md)
+- Setup steps for the Raspberry Pi 5 with Ubuntu 24.04(jammy) can be found here: [Pi5 Setup Guidence](ubuntu24_04_tutorial.md).
+
+- ~~Setup steps for the Raspberry Pi 5 can be found here: [ Pi5 Setup Guidence](rasp_os_tutorial.md)~~
 
 - Setup steps for the ROS2 can be found here: [ROS2 Setup Guidence](ros2_setup.md)
 
 - Other related Tutorials can be found here: [Related Information](other_tutorials)
- 
+
+ ## Server Setup
+
+ - Setup steps for the database can be found here: [PostgreSQL and Grafana Setup Guidence](postgreSQL_grafana_Tut.md).
 
 # Tutorial
 Find basic repo structure:

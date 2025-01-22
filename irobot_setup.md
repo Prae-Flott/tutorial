@@ -17,6 +17,10 @@ After rebooting the robot, connect again to the wifi of the robot and go into th
 
 Here we need to do some configurations as follows:
 
+### Firmware Update
+- The first step after getting a new Create3 Robot is to update its firmware to the new updated `I.0.0 FastDDS` which is introduced in [docs pages](https://iroboteducation.github.io/create3_docs/releases/i_0_0/)
+  This new version of firmware works for Ros2 Iron but is also paired with Ros2 Fuzzy, which we used on Ubuntu 24.04LTS.
+
 ### Connect
 - Open from the top menu `Connect`
 - The Hostname should be given in a form like `robot-0n` (n is 1-10).

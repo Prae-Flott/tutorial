@@ -99,6 +99,8 @@ Follow the [official tutorial for Ubuntu](https://iroboteducation.github.io/crea
 
 As ROS2 communication depends a lot on the synchronization of the clock, we need to provide an  NTP server to synchronize the time between the robot and Pi, without having internet. The process can be found in the following [tutorial](https://iroboteducation.github.io/create3_docs/setup/compute-ntp/)
 
+After finishing the official tutorial, you can check the connection by `ping 192.168.186.2`
+
 ## ROS2-jazzy-installation
 From the [iRobot official tutorial](https://iroboteducation.github.io/create3_docs/setup/ubuntu2204/) and the [ROS2 jazzy documentation](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html), we sum the installation into following steps.
 

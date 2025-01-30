@@ -18,15 +18,17 @@ The installation is through Imager and can be downloaded from the following [lin
 
 Then to keep the setting identical on all our 10 robots, we need to clarify some setup before starting the SD card
 
-- Open **Edit Setting** and set the hostname as `robot0X-pi5` the `X` here is the unique ID for each robot, e.g. robot00-pi5. Similarly, the Username should be `robot0X`, and the Password should be `123456`, same for all the Pis.
+After sticking the SD card to the Pi, and connecting the monitor, the keyboard, and maus, we can start setup.
+
+- Set the hostname as `robot0X-pi5` the `X` here is the unique ID for each robot, e.g. robot00-pi5. Similarly, the Username should be `robot0X`, and the Password should be `123456`, same for all the Pis.
 - To connect the robot to the local Server, we have provided WiFi for local servers:
 
   **WIFI name at chair ASM:** `ASM_RoboFlott`, **Password:** `roboflott123`
-- After install the OS, it will be nice if you can update the time manually, with an example
+
+- After installing the OS, it will be nice if you can update the time manually, with an example
 ```
 sudo date -s '23 October 2024 12:00:00'  
 ```
-
 - To enable `ssh`, we also need to run:
 ```
 sudo apt install openssh-client openssh-server -y

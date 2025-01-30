@@ -127,7 +127,10 @@ From the [iRobot official tutorial](https://iroboteducation.github.io/create3_do
   ```
   echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
   ```
+- Install the ros2 develop tools
 
+  `sudo apt update && sudo apt install ros-dev-tools`
+  
 - Make sure your other packages are up to date
 
   `sudo apt update && sudo apt upgrade`

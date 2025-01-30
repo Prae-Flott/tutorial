@@ -4,8 +4,6 @@
 
 [Ubuntu24.04 Document](https://ubuntu.com/blog/tag/ubuntu-24-04-lts)
 
-- This tutorial works for Ubuntu 24.04 LTS Desktop edition, The server edition has a problem with a Wi-Fi connection break issue, and the Core24 edition has not been tested yet.
-
 ## Table of Contents
 - [OS Installation](#OS-Installation)
 - [Ethernet Connection & NTP Server](#Create-Ethernet-on-USB0)
@@ -24,6 +22,8 @@ After sticking the SD card to the Pi, and connecting the monitor, the keyboard, 
 - To connect the robot to the local Server, we have provided WiFi for local servers:
 
   **WIFI name at chair ASM:** `ASM_RoboFlott`, **Password:** `roboflott123`
+
+- For the Server edition, you shall able to do these steps through Edit Setting in the imager. 
 
 - After installing the OS, it will be nice if you can update the time manually, with an example
 ```

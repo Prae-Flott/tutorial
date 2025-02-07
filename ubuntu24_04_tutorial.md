@@ -145,7 +145,11 @@ From the [iRobot official tutorial](https://iroboteducation.github.io/create3_do
 
 - Next add the Create® 3 messages:
 
-  `sudo apt install -y ros-jazzy-irobot-create-msgs`
+  `sudo apt install -y ros-jazzy-irobot-create-msgs ros2-jazzy-geometry-msgs`
+
+- Install additional build tools (like colcon):
+
+  `sudo apt install -y python3-colcon-common-extensions python3-rosdep ros-jazzy-rmw-cyclonedds-cpp`
 
 - The default middleware that ROS 2 uses is `Fast DDS`
 

@@ -5,6 +5,23 @@
 Follow the steps in:
 [PostgreSQL Document](https://www.postgresql.org/download/linux/ubuntu/)
 
+### Grant Client Authentication
+
+After installing the database, we also need to grant client authentication using `pg_hba.conf`.
+
+Add a line permitting your client’s IP (or subnet). For example, to allow any host on example IP address ( eg: 192.168.1.0/24) using password auth:
+
+```
+# TYPE  DATABASE    USER      ADDRESS         METHOD
+host    all         all       192.168.1.0/24  md5
+```
+
+Save the file and reload the config (no full restart needed):
+
+```
+sudo systemctl reload postgresql
+```
+
 ## PostgreSQL Tutorial
 
 ## Grafana Installation

@@ -43,6 +43,12 @@ Add a line permitting your client’s IP (or subnet). For example, to allow any 
 host    all         all       192.168.1.0/24  md5
 ```
 
+change the user authentification for the Linux system, find the following line, change the `peer` to `md5`:
+
+```
+local   all             all                                     peer
+```
+
 Save the file and reload the config (no full restart needed):
 
 ```

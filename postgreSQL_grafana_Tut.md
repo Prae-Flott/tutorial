@@ -7,6 +7,12 @@ Follow the steps in:
 
 ### Configure PostgreSQL to Listen on External Interfaces
 
+Check the PostgreSQL version with:
+
+```
+psql --version
+```
+
 Open your `postgresql.conf`, with 
 
 ```

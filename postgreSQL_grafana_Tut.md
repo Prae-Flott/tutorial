@@ -7,7 +7,24 @@ Follow the steps in:
 
 ### Configure PostgreSQL to Listen on External Interfaces
 
-Open your `postgresql.conf`
+Open your `postgresql.conf`, with 
+
+```
+nano  /etc/postgresql/<version>/main/postgresql.conf
+```
+
+and find:
+
+```
+# - Connection Settings -
+
+listen_addresses = '*'                  # what IP address(es) to listen on;
+```
+
+So that the server would accept the information from any other addresses.
+
+And also check, if `port=5432`
+
 
 ### Grant Client Authentication
 

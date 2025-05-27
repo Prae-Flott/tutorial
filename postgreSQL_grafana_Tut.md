@@ -57,6 +57,19 @@ sudo systemctl reload postgresql
 
 ## PostgreSQL Tutorial
 
+- log in to the database with user name
+
+```
+psql -U server -d <user_name>
+```
+
+- list all the content under the table in a shema
+
+```
+SELECT * FROM <shema_name>.<table_name>
+```
+
+
 ## Grafana Installation
 
 Follow the steps in:

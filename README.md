@@ -18,9 +18,13 @@
 
  ## Server Setup
 
- - Setup steps for the database can be found here: [PostgreSQL and Grafana Setup Guidence](postgreSQL_grafana_Tut.md).
+- Setup steps for the database can be found here: [PostgreSQL and Grafana Setup Guidence](postgreSQL_grafana_Tut.md).
 
 # Tutorial
+## Data collection from the iRobots
+- If you are with Chair ASM, please find the following steps: [IRobot_Data_Collection_ASM](irobot_data_collection_asm.md)
+
+
 Find basic repo structure:
 - docs
 - code

@@ -60,7 +60,7 @@ sudo systemctl reload postgresql
 - log in to the database with user name
 
 ```
-psql -U <database_name> -d <user_name>
+psql -U <user_name> -d <database_name>
 ```
 
 - list all the content under the table in a shema

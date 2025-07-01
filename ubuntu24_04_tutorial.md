@@ -145,7 +145,7 @@ From the [iRobot official tutorial](https://iroboteducation.github.io/create3_do
 
 - Next add the Create® 3 messages:
 
-  `sudo apt install -y ros-jazzy-irobot-create-msgs ros2-jazzy-geometry-msgs`
+  `sudo apt install -y ros-jazzy-irobot-create-msgs ros-jazzy-geometry-msgs`
 
 - Install additional build tools (like colcon):
 
